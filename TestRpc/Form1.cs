@@ -17,13 +17,13 @@ namespace TestRpc
         {
             InitializeComponent();
             GetMWproj();
-            CountMilkyway();
         }
 
         int NumTasks = 0;
         int LastCnt = -1;
         private Project pMilkyway;
         private string strPassword = "";
+        //private RpcClient rpcClient;
 
         private async Task GetMWproj()
         {
@@ -38,6 +38,8 @@ namespace TestRpc
                     if (p.ProjectName == "Milkyway@Home")
                     {
                         pMilkyway = p;
+                        await CountMilkyway();
+                        break;
                     }
                 }
             }
@@ -50,7 +52,8 @@ namespace TestRpc
             {
                 await rpcClient.ConnectAsync("192.168.1.251", 31416);
                 bool authorized = await rpcClient.AuthorizeAsync(strPassword);
-                await rpcClient.PerformProjectOperationAsync(pMilkyway, ProjectOperation.Update);
+                if(authorized)
+                    await rpcClient.PerformProjectOperationAsync(pMilkyway, ProjectOperation.Update);
             }
         }
 
@@ -62,29 +65,25 @@ namespace TestRpc
             {
                 await rpcClient.ConnectAsync("192.168.1.251", 31416);
                 bool authorized = await rpcClient.AuthorizeAsync(strPassword);
-
-                if (authorized)
+                CoreClientState ccs = await rpcClient.GetStateAsync();
+                foreach (Workunit wu in ccs.Workunits)
                 {
-                    CoreClientState ccs = await rpcClient.GetStateAsync();
-                    foreach (Workunit wu in ccs.Workunits)
+                    if (wu.ProjectUrl.Contains("milkyway"))
                     {
-                        if (wu.ProjectUrl.Contains("milkyway"))
-                        {
-                            NumTasks++;
-                        }
-
+                        NumTasks++;
                     }
-                    if (NumTasks == LastCnt) return;
-                    LastCnt = NumTasks;
-                    TBoxOutput.Text += NumTasks.ToString() + "\r\n";
+
                 }
+                if (NumTasks == LastCnt) return;
+                LastCnt = NumTasks;
+                TBoxOutput.Text += NumTasks.ToString() + ", ";
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MWTimer.Enabled = true;
-            TBoxOutput.Text = "Starting Timeout " + DateTime.Now.ToLongTimeString() + "\r\n"; ;
+            TBoxOutput.Text += "Starting Timeout " + DateTime.Now.ToLongTimeString() + "\r\n"; ;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -99,6 +98,7 @@ namespace TestRpc
             pBarTimer.Value++;
             if(pBarTimer.Value >= 119)
             {
+                pBarTimer.Value = 0;
                 if (NumTasks == 0)
                 {
                     MWTimer.Enabled = false;
