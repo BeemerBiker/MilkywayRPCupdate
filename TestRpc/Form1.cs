@@ -16,6 +16,8 @@ namespace TestRpc
         public Form1()
         {
             InitializeComponent();
+            LastCnt = -1;
+            NumTasks = 0;
             GetMWproj();
         }
 
@@ -54,6 +56,7 @@ namespace TestRpc
                 bool authorized = await rpcClient.AuthorizeAsync(strPassword);
                 if(authorized)
                     await rpcClient.PerformProjectOperationAsync(pMilkyway, ProjectOperation.Update);
+                button1.Enabled = true;
             }
         }
 
@@ -82,6 +85,7 @@ namespace TestRpc
 
         private void button1_Click(object sender, EventArgs e)
         {
+            button1.Enabled = false;
             MWTimer.Enabled = true;
             TBoxOutput.Text += "Starting Timeout " + DateTime.Now.ToLongTimeString() + "\r\n"; ;
         }
