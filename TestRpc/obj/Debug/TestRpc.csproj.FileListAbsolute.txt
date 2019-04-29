@@ -1,0 +1,13 @@
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.csprojAssemblyReference.cache
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.Form1.resources
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.Properties.Resources.resources
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.csproj.GenerateResource.cache
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.csproj.CoreCompileInputs.cache
+D:\Projects\VSrepository\boincrpc\TestRpc\bin\Debug\TestRpc.exe.config
+D:\Projects\VSrepository\boincrpc\TestRpc\bin\Debug\TestRpc.exe
+D:\Projects\VSrepository\boincrpc\TestRpc\bin\Debug\TestRpc.pdb
+D:\Projects\VSrepository\boincrpc\TestRpc\bin\Debug\BoincRpc.dll
+D:\Projects\VSrepository\boincrpc\TestRpc\bin\Debug\BoincRpc.pdb
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.csproj.CopyComplete
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.exe
+D:\Projects\VSrepository\boincrpc\TestRpc\obj\Debug\TestRpc.pdb

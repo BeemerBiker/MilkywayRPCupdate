@@ -1,0 +1,9 @@
+D:\Projects\VSrepository\boincrpc\BoincRpc\bin\Debug\netstandard1.3\BoincRpc.deps.json
+D:\Projects\VSrepository\boincrpc\BoincRpc\bin\Debug\netstandard1.3\BoincRpc.dll
+D:\Projects\VSrepository\boincrpc\BoincRpc\bin\Debug\netstandard1.3\BoincRpc.pdb
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.csprojAssemblyReference.cache
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.csproj.CoreCompileInputs.cache
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.AssemblyInfoInputs.cache
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.AssemblyInfo.cs
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.dll
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.pdb
