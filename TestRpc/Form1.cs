@@ -23,6 +23,7 @@ namespace TestRpc
         int NumTasks = 0;
         int LastCnt = -1;
         private Project pMilkyway;
+        private string strPassword = "";
 
         private async Task GetMWproj()
         {
@@ -30,7 +31,7 @@ namespace TestRpc
             using (RpcClient rpcClient = new RpcClient())
             {
                 await rpcClient.ConnectAsync("192.168.1.251", 31416);
-                bool authorized = await rpcClient.AuthorizeAsync("RatDogTrip");
+                bool authorized = await rpcClient.AuthorizeAsync(strPassword);
                 CoreClientState ccs = await rpcClient.GetStateAsync();
                 foreach (Project p in ccs.Projects)
                 {
@@ -48,7 +49,7 @@ namespace TestRpc
             using (RpcClient rpcClient = new RpcClient())
             {
                 await rpcClient.ConnectAsync("192.168.1.251", 31416);
-                bool authorized = await rpcClient.AuthorizeAsync("RatDogTrip");
+                bool authorized = await rpcClient.AuthorizeAsync(strPassword);
                 await rpcClient.PerformProjectOperationAsync(pMilkyway, ProjectOperation.Update);
             }
         }
@@ -60,7 +61,7 @@ namespace TestRpc
             using (RpcClient rpcClient = new RpcClient())
             {
                 await rpcClient.ConnectAsync("192.168.1.251", 31416);
-                bool authorized = await rpcClient.AuthorizeAsync("RatDogTrip");
+                bool authorized = await rpcClient.AuthorizeAsync(strPassword);
 
                 if (authorized)
                 {
