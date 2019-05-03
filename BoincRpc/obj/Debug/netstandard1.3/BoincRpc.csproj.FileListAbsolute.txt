@@ -6,3 +6,4 @@ D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.Ass
 D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.AssemblyInfo.cs
 D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.dll
 D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.pdb
+D:\Projects\VSrepository\boincrpc\BoincRpc\obj\Debug\netstandard1.3\BoincRpc.csprojAssemblyReference.cache

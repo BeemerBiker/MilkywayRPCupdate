@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BoincRpc", "BoincRpc\BoincR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRpc", "TestRpc\TestRpc.csproj", "{D5925EC9-C15B-4FC6-B1F0-047F164F7737}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPCupdate", "RPCupdate\RPCupdate.csproj", "{D64ABC86-1E29-4E02-956B-99BE7FCFD212}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D5925EC9-C15B-4FC6-B1F0-047F164F7737}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5925EC9-C15B-4FC6-B1F0-047F164F7737}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5925EC9-C15B-4FC6-B1F0-047F164F7737}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D64ABC86-1E29-4E02-956B-99BE7FCFD212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D64ABC86-1E29-4E02-956B-99BE7FCFD212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D64ABC86-1E29-4E02-956B-99BE7FCFD212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D64ABC86-1E29-4E02-956B-99BE7FCFD212}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
